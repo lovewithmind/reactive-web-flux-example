@@ -20,12 +20,16 @@ repositories {
 }
 
 dependencies {
+    implementation "com.google.code.gson:gson:2.8.5"
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
     implementation "org.springframework.boot:spring-boot-starter-mustache:$springBootVersion"
     implementation "org.springframework.boot:spring-boot-starter-data-mongodb-reactive:$springBootVersion"
     implementation "org.springframework.boot:spring-boot-starter-webflux:$springBootVersion"
     implementation "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version"
     testImplementation "org.springframework.boot:spring-boot-starter-test:$springBootVersion"
+    testImplementation "de.flapdoodle.embed:de.flapdoodle.embed.mongo:2.0.2"
+    testImplementation('io.kotlintest:kotlintest-runner-junit5:3.1.10')
+    testImplementation ('io.projectreactor:reactor-test:3.2.2.RELEASE')
 }
 
 compileKotlin {
